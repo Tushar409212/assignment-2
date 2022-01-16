@@ -17,12 +17,19 @@ h1{
 .top-banner{
     display: flex;
 }
+.transform:hover .rotate{
+    transform: rotate(360deg);
+}
+.rotate{
+    transition: transform 2s ease-in-out;
+}
 .intro{
     width: 50%;
     padding: 5%;
 }
 .intro img{
     width: 100%;
+
 }
 .btn{
     background-color: tomato;
@@ -61,8 +68,14 @@ h1{
     justify-content: center;
 }
 .see{
-    position: absolute;
-    right:0px;
+    display: inline-block;
+    position: relative;
+    left: 1190px;
+    margin-bottom: 3px;
+    font-size: 20px;
+
+    /* border: 2px solid red; */
+    
     
     
     
