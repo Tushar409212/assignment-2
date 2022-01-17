@@ -5,6 +5,7 @@ body{
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+/* utilities */
 .flexible{
     padding: 10px 100px;
     /* border: 2px solid red; */
@@ -13,10 +14,22 @@ body{
 h1{
     font-size: 35px;
 }
+.section-title{
+    font-size: 30px;
+    
+
+    
+
+}
 /* top-banner */
 .top-banner{
     display: flex;
 }
+.banner{
+    display: flex;
+}
+
+
 .transform:hover .rotate{
     transform: rotate(360deg);
 }
@@ -29,6 +42,7 @@ h1{
 }
 .intro img{
     width: 100%;
+    border-radius: 20px;
 
 }
 .btn{
@@ -38,10 +52,19 @@ h1{
     border-radius: 15px;
     cursor: pointer;
 }
+/* products section */
 .center{
     display: flex;
     justify-content: center;
+    color: gray;
     
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 40px;
+    justify-content: center;
 }
 .product{
     box-shadow: 10px 10px 30px lightgray;
@@ -60,17 +83,11 @@ h1{
 .product-rating{
     margin-left: 20px;
 }
-.products{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 24px;
-    grid-row-gap: 40px;
-    justify-content: center;
-}
+/* see section */
+
 .see{
-    display: inline-block;
-    position: relative;
-    left: 1190px;
+    position: absolute;
+    right: 0px;
     margin-bottom: 3px;
     font-size: 20px;
 
@@ -84,6 +101,7 @@ h1{
     text-decoration: none;
     color: rgb(224, 55, 26);
 }
+/* footer section */
 footer{
     background-color: black;
     color: white;
@@ -96,3 +114,48 @@ footer{
     font-size: 1.3rem;
     
 }
+/* media queries */
+
+    
+
+@media only screen and (max-width:688px) {
+    .top-banner{
+        /* background-color: red; */
+        flex-direction: column-reverse;
+
+    }
+    .banner{
+        flex-direction: column;
+    }
+    h1{
+        font-size: 21px;
+    }
+    .intro{
+        padding: 2%;
+    }
+    .products{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .btn{
+        width: 70%;
+    margin-top: 10px;
+    }
+    .intro img {
+        width: 130%;
+        border-radius: 20px;
+    }
+    .see{
+        display: inline-block;
+        position: relative;
+        left: 80%;
+        margin-bottom: 3px;
+        font-size: 20px;}
+    }
+    /* tablet  */
+   @media only screen and (min-width:688px) and (max-width:992px){
+    .products{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+       
+   }
